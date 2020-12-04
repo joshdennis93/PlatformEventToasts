@@ -7,11 +7,11 @@ Declarative approach to creating custom toast messages via Platform Events
 3. Ensure the Notification__e platform event is created & has the Message, Mode, RecordId, Title & Variant custom fields.
 ![image1](./images/PE%20config.PNG)
 4. Either add 'notification' lwc to a utility bar (via app manager in setup) or add it specifically to a lightning record page.
-![image2](./images/flexipage config.png)
+![image2](./images/flexipage%20config.png)
 5. Create a process or flow (or anything else) to trigger the notification.
     - The trigger should be any standard action e.g. ISCHANGED(Lead.LastName)
     - The output (i.e. what defines the toast) is a record create - create a new Notification__e record. Title and Message fields are required, all else is optional. Refer to SF documentation at https://developer.salesforce.com/docs/component-library/bundle/lightning-platform-show-toast-event/documentation.
-![image3](./images/process config.png)
+![image3](./images/process%20config.png)
 
 ### NOTES:
 - This is currently only able to send simple notifications which don't include URLs (e.g. no 'Click _here_ to view reference documentation'). You can extend the functionality to include this by playing around with the messageData parameter (see https://developer.salesforce.com/docs/component-library/bundle/lightning-platform-show-toast-event/documentation).
